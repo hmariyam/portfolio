@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>MARIYAM - PORTFOLIO</title>
+    <link rel="icon" type="image" href="/portfolio/assets/heart-Cxlcey8c.webp">
+  <script type="module" crossorigin src="/portfolio/assets/game-rQQkd-tv.js"></script>
+  <link rel="modulepreload" crossorigin href="/portfolio/assets/modulepreload-polyfill-B5Qt9EMX.js">
+</head>
+<body>
+    <style>
+        @font-face {
+            font-family : PixelFont;
+            src: url(PixelCode.ttf);
+        }
+
+        body {
+            font-family: PixelFont;
+            font-size: 2rem;
+            overflow: hidden;
+        }
+
+        #app {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        #textbox {
+            position: absolute;
+            left: 10%;
+            right: 10%;
+            bottom: 2vh;
+            min-height: 10vh;
+            max-height: 1500px;
+            background:  white;
+            border-radius: 3px;
+            border: rgb(138, 70, 112) solid;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            word-spacing: 0.2rem;
+            filter: drop-shadow(0 0 0.75rem rgb(112, 112, 112));            
+        }
+
+        .ui-text {
+            margin: 0;
+            user-select: none;
+            color: rgb(138, 70, 112);
+        }
+
+        .ui-close-btn {
+            font-family: inherit, monospace;
+            border-style: none;
+            padding: 1px;
+            font-size: inherit;
+            padding-left: 13px;
+            padding-top: 0px;
+            color: rgb(138, 70, 112);
+        }
+
+        .btn-container {
+            align-self: flex-end;
+            border: rgb(138, 70, 112) solid 2px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .note {
+            position: absolute;
+            left: 5%;
+            top: 1vh;
+            display: flex;
+            flex-direction: column;
+            color: rgb(138, 70, 112);
+            user-select: none;
+        }
+
+        #note2 {
+            padding-top: 40px;
+        }
+
+        #note3 {
+            margin-top: 800px;
+            border: solid 2px white;
+            padding: 5px;
+            background-color: white;
+            transition: all 0.5s ease;
+        }
+
+        #note3:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+    <div id="app">
+        <div id="ui">
+            <p class="note">Cliquez pour bougez/Tap to move</p>
+            <button type="button" class="note" id="note3">
+                <a href="index.html" target="_self">
+                    Retourner/Return
+                </a>
+            </button>
+            <div id="textbox-container" style="display: none">
+                <div id="textbox">
+                    <p id="dialogue" class="ui-text"></p>
+                    <div class="btn-container">
+                        <button id="close" class="ui-close-btn"> X </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <canvas id="game">
+        </canvas>
+    </div>
+</body>
+</html>
