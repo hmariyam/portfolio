@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>MARIYAM - PORTFOLIO</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <link rel="icon" type="image" href="/portfolio/assets/heart-Cxlcey8c.webp">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script type="module" crossorigin src="/portfolio/assets/main-tNZmye7t.js"></script>
+  <script type="module" crossorigin src="/portfolio/assets/main-BEMKxhBY.js"></script>
   <link rel="modulepreload" crossorigin href="/portfolio/assets/modulepreload-polyfill-B5Qt9EMX.js">
-  <link rel="stylesheet" crossorigin href="/portfolio/assets/main-B_boqHMa.css">
+  <link rel="stylesheet" crossorigin href="/portfolio/assets/main-eH9SAQEB.css">
 </head>
 <body>
     <section id="home">
@@ -25,7 +25,7 @@
                 <h2 class="navbar-brand"> <a class="nav-link" href="#home"> MARIYAM HANFAOUI </a> </h2>
             </div>
 
-            <div class="nav-items">
+            <div class="nav-items" id="myNavbar">
                 <ul class="nav">
                     <li class="nav-item"><a class="nav-link active" href="#aboutme" data-i18n="about"> À Propos </a></li>
                     
@@ -36,6 +36,7 @@
                     <li class="nav-item"><a class="nav-link active" href="#contacts" data-i18n="contact"> Contact </a></li>
                 </ul>
             </div>
+            
             <div class="language-dropdown">
                 <button class="language-btn"> <i class="fa fa-globe fa-3x" aria-hidden="true"></i> </button>
                 <div class="dropdown-content">
@@ -58,7 +59,7 @@
 
     <section id="aboutme" class="pageElement">
         <div class="container-fluid">
-            <div class="row profile-card justify-content-center" style="margin-left: 145px;">
+            <div class="row profile-card justify-content-center mx-0">
                 <div class="col-sm-3 d-flex justify-content-center">
                     <img src="/portfolio/assets/pfp-QF50xVdu.png" alt="pfp_circle" id="circlePhoto">
                 </div>
@@ -106,7 +107,7 @@
     </section><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <section id="projects" class="pageElement">
-        <div class="container">
+        <div class="container" id="projectContainer">
             <h2 class="text-center" id="skillTitle" data-i18n="projectTitle"> PROJETS </h2><br>
              <div class="card project-about-card">
                 <p class="text-center" id="projectAboutCardText" data-i18n="projectAboutCardText"> Voici quelques projets sur lesquels j'ai travaillé au cours de mon parcours en tant qu'étudiante en informatique &lt;3 <br>
@@ -203,9 +204,9 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-sm-4">
                         <label for="message" id="messageLabel"> Message </label>
-                        <textarea name="message" rows="10" cols="10" class="form-control" id="message" style="resize: none;"> </textarea><br>
+                        <textarea name="message" rows="10"  class="form-control" id="message" style="resize: none;"> </textarea><br>
                     </div>
-                    <div>
+                    <div class="text-center" id="btnEnvoyerDiv">
                         <button class="btn" id="btnEnvoyer" type="submit" data-i18n="sendBtn"> Envoyez </button>
                     </div>
                 </div>
